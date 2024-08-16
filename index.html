@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=EDGE">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="style.css">
+    <title>Encriptador</title>
+</head>
+
+<body>
+    <header>
+        <img class="logo__alura" src="assets/Frame 6.png" alt="logo alura">
+    </header>
+    <main>
+        <section>
+            <textarea class="text__area" cols="41" rows="4" placeholder="Digite seu texto"></textarea>
+            <div class="informacoes">
+                <img class="exclamacao" src="assets/bi_exclamation-circle-fill.png" alt="ponto de exclamação">
+                <h6 class="mensagem__informacoes">Apenas letras minúsculas e sem acento.</h6>
+            </div>
+            <div class="botoes">
+                <button class="btn__encriptar" onclick="btnEncriptar()">Criptografar</button>
+                <button class="btn__desencriptar" onclick="btnDesencriptar()">Descriptografar</button>
+            </div>
+        </section>
+        <section>
+            <div class="mensagem-container">
+                <textarea class="mensagem" cols="20" rows="10"></textarea>
+                <div>
+                    <h6 class="mensagemsubtitulo">Nenhuma mensagem encontrada.</h6>
+                    <p class="containerparagrafo">Digite um texto que você deseja <br>criptografar ou descriptografar.
+                    </p>
+                </div>
+                <button class="copiar" id="notificacao" onclick="btnCopiar()">Copiar</button>
+            </div>
+
+    </main>
+    <footer class="rodape">
+        <p>Desenvolvido por Thaynara Ramos, 2024.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
