@@ -13,7 +13,7 @@ feito com base no que foi estudado no Curso para Iniciante em Programação.
 - **Opção de Escolha**: Permite selecionar entre criptografar ou descriptografar.
 - **Exibição do Resultado**: Mostra o resultado na tela.
 
-  # "Chaves" de Criptografia
+# "Chaves" de Criptografia
 A letra "e" é convertida para "enter"
 A letra "i" é convertida para "imes"
 A letra "a" é convertida para "ai"
