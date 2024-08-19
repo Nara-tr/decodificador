@@ -13,18 +13,29 @@ const subtitulo = document.querySelector(".mensagemsubtitulo");
 //let matrizCodigo = [["e" , "enter"] , ["i" , "imes"] , ["a" , "ai"] , ["o" , "ober"] , ["u" , "ufat"]]
 
 function btnEncriptar() {
-    const textoEncriptado = encriptar(textArea.value);
-    mensagem.value = textoEncriptado;
-    textArea.value = "";
-    ocultarImagem();
-    ocultarMensagem();
+    const texto = textArea.value;
+
+    // Valida o texto antes de criptografar
+    if (isTextoValido(texto)) {
+        const textoEncriptado = encriptar(texto);
+        mensagem.value = textoEncriptado;
+        textArea.value = "";
+        ocultarImagem();
+        ocultarMensagem();
+    } else {
+        alert("Por favor, insira apenas letras minúsculas e sem acentos.");
+    }
 }
 
+function isTextoValido(texto) {
+    // Verifica se o texto contém apenas letras minúsculas e espaços
+    const regex = /^[a-z\s]+$/;
+    return regex.test(texto);
+}
 
 function encriptar(stringEncriptada) {
     let matrizCodigo = [["e", "enter"], ["i", "imes"], ["a", "ai"], ["o", "ober"], ["u", "ufat"]];
-    stringEncriptada = stringEncriptada.toLowerCase();
-
+    
     for (let i = 0; i < matrizCodigo.length; i++) {
         if (stringEncriptada.includes(matrizCodigo[i][0])) {
             stringEncriptada = stringEncriptada.replaceAll(matrizCodigo[i][0], matrizCodigo[i][1]);
@@ -32,6 +43,7 @@ function encriptar(stringEncriptada) {
     }
     return stringEncriptada;
 }
+
 
 function btnDesencriptar() {
     const textoDesencriptado = desencriptar(textArea.value);
