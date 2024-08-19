@@ -30,4 +30,4 @@ Por exemplo:
 gaitober" => "gato"
 
 # Link para acessar o site: 
-
+-https://decodificador-chi-lyart.vercel.app/
